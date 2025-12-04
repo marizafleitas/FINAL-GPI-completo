@@ -9,11 +9,20 @@ El objetivo en el examen / hackathon es **mejorar y extender** este baseline, no
 
 ## 1. Requisitos
 
-- **Python 3.11** (recomendado)
-- Conexión a internet solo para la **primera instalación de dependencias** (`pip install`)
+### ✔ Python 3.11 (recomendado)
 
-Los comandos que se muestran a continuación asumen un entorno Windows PowerShell / Git Bash.  
-Adaptar según sistema operativo si fuera necesario.
+Descargar desde el sitio oficial:
+
+- Instalador directo Windows (64-bit):  
+  https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe
+
+- Página oficial de la versión:  
+  https://www.python.org/downloads/release/python-3119/
+
+> Asegúrese de marcar **“Add Python to PATH”** durante la instalación.
+
+### ✔ Conexión a internet
+Solo necesaria para la *primera* instalación de dependencias (`pip install`).
 
 ---
 
