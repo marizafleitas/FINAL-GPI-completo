@@ -1,0 +1,143 @@
+/* ======== ESTILO GENERAL ======== */
+
+body {
+    background: #f2f4f8;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* ======== TÍTULOS ======== */
+
+h1 {
+    margin-bottom: 15px;
+    color: #1c1c1c;
+}
+
+h2 {
+    margin-top: 0;
+    color: #1c1c1c;
+}
+
+/* ======== MENÚ PRINCIPAL ======== */
+
+.menu-admin {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* ======== BOTONES ======== */
+
+.btn-primary {
+    background: #0066cc;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    transition: 0.15s ease-in-out;
+}
+
+.btn-primary:hover {
+    background: #1a7ded;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.btn-cancel {
+    background: #888;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-cancel:hover {
+    background: #666;
+}
+
+.actions {
+    margin-top: 15px;
+}
+
+/* ======== TABLAS ======== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+table th {
+    background: #e7e7e7;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid #ccc;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+    background: #f5f8ff;
+}
+
+/* ======== MENSAJES ======== */
+
+.msg {
+    background: #d4edda;
+    padding: 10px;
+    border-left: 5px solid #2e7d32;
+    border-radius: 4px;
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+/* ======== ACCIONES (REEMPLAZAR / ELIMINAR) ======== */
+
+.link {
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.replace {
+    color: #0047ab;
+}
+
+.replace:hover {
+    color: #00337a;
+}
+
+.delete {
+    color: #cc0000;
+}
+
+.delete:hover {
+    color: #990000;
+}
+.actions-cell {
+    white-space: nowrap;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.size-cell {
+    white-space: nowrap;   /* evita saltos de línea */
+}
+

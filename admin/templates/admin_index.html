@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="admin-card">
+    <p>Gestioná los documentos normativos del chatbot.</p>
+
+    <a href="/admin/upload" class="btn-primary">Subir PDF</a>
+    <a href="/admin/list" class="btn-primary">Listar PDFs</a>
+
+    <!-- Nuevo botón para volver al chatbot -->
+    <a href="/" class="btn-secondary" style="margin-top: 20px;">Volver al Chatbot</a>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Reemplazar documento</h2>
+
+<p>Archivo actual: <strong>{{ filename }}</strong></p>
+
+<form action="/admin/replace/{{ filename }}" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept="application/pdf" required>
+
+    <div class="actions">
+        <button type="submit" class="btn-primary">Reemplazar</button>
+        <a href="/admin/list" class="btn-cancel">Cancelar</a>
+    </div>
+</form>
+
+{% endblock %}

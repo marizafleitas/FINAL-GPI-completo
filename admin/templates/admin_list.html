@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Listado de documentos</h2>
+
+{% if msg %}
+<p class="msg">{{ msg }}</p>
+{% endif %}
+
+<table>
+<tr>
+    <th>Nombre</th>
+    <th>Tamaño</th>
+    <th>Acciones</th>
+</tr>
+
+{% for f in files %}
+<tr>
+    <td>{{ f.name }}</td>
+    <td class="size-cell">{{ f.size }} KB</td>
+    <td class="actions-cell">
+    <a href="/admin/replace/{{ f.name }}" class="link replace">Reemplazar</a>
+    <span>|</span>
+    <a href="/admin/delete/{{ f.name }}" 
+       class="link delete"
+       onclick="return confirm('¿Está seguro que desea eliminar {{ f.name }}?');">
+       Eliminar
+    </a>
+</td>
+
+
+</tr>
+{% endfor %}
+</table>
+
+<div style="margin-top: 15px;">
+    <a href="/admin" class="btn-cancel">Volver</a>
+</div>
+
+{% endblock %}

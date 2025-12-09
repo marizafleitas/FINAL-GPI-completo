@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Subir nuevo PDF</h2>
+
+<form action="/admin/upload" method="post" enctype="multipart/form-data">
+
+    <input type="file" name="file" accept="application/pdf" required>
+
+    <div class="actions">
+        <button type="submit" class="btn-primary">Subir</button>
+        <a href="/admin" class="btn-cancel">Cancelar</a>
+    </div>
+
+</form>
+
+{% endblock %}
