@@ -31,23 +31,15 @@ cd fcyt-chatbot-normativo
 2. Crear y activar el entorno virtual
 
 Windows (PowerShell)
-
-PowerShell
-
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
+
 Linux / macOS
-
-Bash
-
 python3 -m venv .venv
 source .venv/bin/activate
-📦 3. Instalar dependencias
+3. Instalar dependencias
 
 ¡CRÍTICO! Esta versión instala librerías para la búsqueda semántica (sentence-transformers):
-
-Bash
-
 pip install -r requirements.txt
 Esto instala:
 
@@ -58,8 +50,8 @@ pypdf
 numpy, scikit-learn
 
 sentence-transformers (para los Embeddings)
+4. Estructura del proyecto
 
-📚 4. Estructura del proyecto
 fcyt-chatbot-normativo/
 ├─ app.py                # Servidor FastAPI y Rutas
 ├─ chatbot.py            # Script de consulta en consola
@@ -67,17 +59,13 @@ fcyt-chatbot-normativo/
 ├─ requirements.txt
 ├─ docs/                 # PDFs normativos de entrada
 └─ .gitignore
-🏗 5. Procesar los PDFs (generar el índice Híbrido)
 
+5. Procesar los PDFs (generar el índice Híbrido)
 Antes de cualquier consulta, se debe generar el índice que contendrá la información para las dos técnicas de búsqueda:
-
-Bash
-
 python procesar_pdfs.py
 Esto produce un archivo: indice_tfidf.pkl
 
 que contiene:
-
 Fragmentos de texto.
 
 Vectorizador TF-IDF.
@@ -85,25 +73,19 @@ Vectorizador TF-IDF.
 Matriz de Embeddings Semánticos para todos los fragmentos.
 
 Cada vez que se agreguen o cambien PDFs en docs/, se debe ejecutar nuevamente este comando.
-
-💬 6. Uso del chatbot en modo consola
-Bash
-
+6. Uso del chatbot en modo consola
 python chatbot.py
 El sistema devolverá los fragmentos más relevantes y el documento correspondiente, priorizando la precisión semántica.
-
-🌐 7. Servidor web con FastAPI
+7. Servidor web con FastAPI
 
 Levantar el servidor:
-
-Bash
-
 uvicorn app:app --reload --port 8000
+
 Abrir en el navegador: http://127.0.0.1:8000/
 
 La interfaz mejorada mostrará los dos scores de relevancia (Score Híbrido y Score Final Semántico), el fragmento recuperado y su origen (página y documento).
 
 Para detener el servidor: CTRL + C
 
-📄 Licencia y uso académico
+Licencia y uso académico
 Este proyecto está diseñado para fines educativos dentro de la FCyT – UNCA.
